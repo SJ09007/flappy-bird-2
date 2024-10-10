@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #67bfee;
+}
+
+#game-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-image: url("../flappy_bg.png");
+  background-size: cover;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: filter 10s ease-in-out; /* Smooth transition */
+}
+
+#bird {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  margin-left: 10px;
+  background-image: url("../bird_fly_1.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+
+.pipe {
+  position: absolute;
+  width: 60px;
+  height: auto;
+  background-image: url("../flappy_pipe.png");
+  background-size: cover;
+}
+
+#score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: white;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+    /* White glow */ 0 0 10px rgba(255, 255, 255, 0.6),
+    /* Larger white glow */ 0 0 15px rgba(255, 255, 255, 0.4); /* Even larger white glow */
+}
+
+#game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+}
+
+#retry-button {
+  padding: 10px 20px;
+  background: #ff5733;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#shin-land {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  pointer-events: none;
+}
+
+#instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+#start-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #28a745;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#pause-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  padding: 10px 20px;
+  background: #ffc107;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#resume-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: none; /* Initially hidden */
+}
+
+#resume-button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  border-radius: 5px;
+}

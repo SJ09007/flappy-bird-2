@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flappy Bird-1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="game-container">
+      <div id="bird"></div>
+      <div id="score">Score: 0</div>
+      <button id="pause-button">Pause</button>
+
+      <div id="resume-container" style="display: none">
+        <div
+          id="resume-button"
+          style="
+            border: 2px solid white;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+          "
+        >
+          Resume
+        </div>
+        <div
+          id="countdown"
+          style="font-size: 48px; color: white; display: none"
+        >
+          3
+        </div>
+      </div>
+
+      <div id="game-over">
+        <h2>Game Over</h2>
+        <p id="final-score">Your score is: 0</p>
+        <!-- Added this line -->
+        <button id="retry-button">Retry</button>
+      </div>
+
+      <div
+        class="pipe"
+        style="height: 250px; top: 0px; left: 500px; transform: rotate(180deg)"
+      ></div>
+      <div class="pipe" style="height: 150px; top: 400px; left: 700px"></div>
+
+      <div id="shin-land">ShinLand</div>
+      <div id="instructions">
+        <h2>Instructions</h2>
+        <p>Press any key to make your bird jump!</p>
+        <p>Avoid hitting the pipes to score points!</p>
+        <button id="start-btn">Start Game</button>
+      </div>
+    </div>
+
+    <!-- Sounds -->
+    <audio id="flap-sound" src="./flap.mp3"></audio>
+    <audio id="die-sound" src="./die.mp3"></audio>
+    <audio id="hit-sound" src="./hit.mp3"></audio>
+    <audio id="point-sound" src="./point.mp3"></audio>
+    <audio id="swoosh-sound" src="./swoosh.mp3"></audio>
+  </body>
+
+  <script src="script.js"></script>
+</html>
